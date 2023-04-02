@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazonia</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;   
+        background-color: black;   
+        justify-content: center;
+        align-items: center;
+    }
+    .page {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background-image: url('Imagens/Fundo 1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        animation: bgPage 20s linear infinite;
+        justify-content: center;
+        align-items: center;
+    }
+    @keyframes bgPage {
+        0%{
+            background-image: url('Imagens/Fundo 1.jpg');
+            opacity: 70%;
+        }
+        20%{
+            background-image: url('Imagens/Fundo 1.jpg');
+            opacity: 70%;
+        }
+        25%{
+            background-image: url('Imagens/Fundo 2.jpg');
+            opacity: 70%;
+        }
+        45%{
+            background-image: url('Imagens/Fundo 2.jpg');
+            opacity: 70%;
+        }
+        50%{
+            background-image: url('Imagens/Fundo 3.jpg');
+            opacity: 70%;
+        }
+        70%{
+            background-image: url('Imagens/Fundo 3.jpg');
+            opacity: 70%;
+        }
+        75%{
+            background-image: url('Imagens/Fundo 4.jpg');
+            opacity: 70%;
+        }
+        95%{
+            background-image: url('Imagens/Fundo 4.jpg');
+            opacity: 70%;
+        }
+    }
+    .overlay {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .wrapper{
+        position: relative;
+        right: 100px;
+        top: 135px;
+        width: 300px;
+        height: 300px;
+    }
+    .circle {
+        justify-content: center;
+        width: 10%;
+        height: 10%;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        left: 12%;
+        transform-origin: 20%;
+        animation: circle .5s alternate infinite ease;
+    }
+    @keyframes circle{
+        0%{
+            top: 50%;
+            height: 20px;
+            border-radius: 50px 50px 50px 50px;
+            transform: scaleX(1.5);
+        }
+        50%{
+            height: 25px;
+            border-radius: 50%;
+            transform: scaleX(1);
+        }
+        100%{
+            top: 0%;
+        }
+    }
+    .circle:nth-child(2){
+        left: 45%;
+        animation-delay: .2s
+    }
+    .circle:nth-child(3){
+        left: auto;
+        right: 13%;
+        animation-delay: .3s
+    }
+    .birds{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+    }
+    .bird1 {
+        position: absolute;
+        right: 0%;
+        width: 30%;
+        height: 50%;
+        animation: bird1 20s linear infinite;
+    }
+    @keyframes bird1{
+        0%{
+            top: 0px;
+            opacity: 100%;
+        }
+        10%{
+            top: 20px;
+            opacity: 100%;
+        }
+        20%{
+            top: 0px;
+            opacity: 100%;
+        }
+        21%{
+            opacity: 0%;
+        }
+        95%{
+            opacity: 0%;
+        }
+    }
+    .bird2 {
+        position: absolute;
+        transform: scaleX(-1);
+        top: 9%;
+        width: 30%;
+        height: 50%;
+        animation: bird2 20s linear infinite;
+    }
+    @keyframes bird2{
+        0%{
+            opacity: 0%;
+        }
+        49%{
+            opacity: 0%;
+        }
+        50%{
+            opacity: 100%;
+        }
+        70%{
+            opacity: 100%;
+        }
+        71%{
+            opacity: 0%;
+        }
+        100%{
+            opacity: 0%;
+        }
+    }
+    .plants{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+    }
+    .plant1 {
+        position: absolute;
+        transform: scaleX(-1);
+        left: 0%;
+        bottom: 0%;
+        width: 30%;
+        height:45%;
+        animation: plant1 20s linear infinite;
+    }
+    @keyframes plant1{
+        0%{
+            opacity: 100%;
+        }
+        10%{
+            opacity: 100%;
+        }
+        20%{
+            opacity: 100%;
+        }
+        23%{
+            opacity: 0%;
+        }
+        95%{
+            opacity: 0%;
+        }
+    }
+    .plant2 {
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        width: 40%;
+        height:70%;
+        animation: plant2 20s linear infinite;
+    }
+    @keyframes plant2{
+        0%{
+            opacity: 0%;
+        }
+        49%{
+            opacity: 0%;
+        }
+        50%{
+            opacity: 100%;
+        }
+        70%{
+            opacity: 100%;
+        }
+        73%{
+            opacity: 0%;
+        }
+        100%{
+            opacity: 0%;
+        }
+    }
+    .plant3 {
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        width: 70%;
+        height:70%;
+        animation: plant3 20s linear infinite;
+    }
+    @keyframes plant3{
+        0%{
+            opacity: 0%;
+        }
+        24%{
+            opacity: 0%;
+        }
+        25%{
+            opacity: 100%;
+        }
+        45%{
+            opacity: 100%;
+        }
+        48%{
+            opacity: 0%;
+        }
+        100%{
+            opacity: 0%;
+        }
+    }
+    .content {
+        position: relative;
+        bottom: 15%;
+        width: 100%;
+        height: 100%;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    .content h1 {
+        padding-top: 0;
+        margin-top: 0;
+        font-family: 'Activists';
+        font-size: 200px;
+        margin-bottom: 10px;
+    }
+    .content p {
+        font-family: 'Louis George Cafe';
+        font-size: 20px;
+        margin: 3;
+    }
+    .content span {
+        font-family: 'Louis George Cafe';
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="page">
+        <div class="overlay"></div>
+
+            <div class="birds">
+                <img src="Imagens/Passaro 1.png" class="bird1">
+                <img src="Imagens/Passaro 2.png" class="bird2">
+            </div>
+
+            <div class="plants">
+                <img src="Imagens/Planta 1.png" class="plant1">
+                <img src="Imagens/Planta 2.png" class="plant2">
+                <img src="Imagens/Planta 3.png" class="plant3">
+            </div>
+
+            <div class="content">
+                <div class="wrapper">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <h1>Amazônia</h1>
+                <p>Uma área de <span>seis milhões de hectares</span> no centro de sua bacia hidrográfica.</p>
+                <p>A maioria das florestas está contida dentro do Brasil.</p>
+                <p><span>7 milhões</span> de quilômetros quadrados.</p>     
+            </div>  
+    </div>
+</body>
+</html>
